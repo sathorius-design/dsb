@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digitales Schwarzes Brett</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- =========================
+         OBERER BEREICH (40 %)
+         ========================= -->
+    <div class="top">
+
+      <!-- LINKER BEREICH -->
+      <div class="top-left">
+        <div class="top-logo">
+          <img class="logo" src="assets/logo.png" alt="Schullogo">
+        </div>
+
+        <section class="tile tile-info">
+          <div class="info-row">
+            <img class="info-icon" src="assets/icon-calendar.png" alt="">
+            <div>
+              <div class="info-big" id="dateText">--.--.----</div>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <img class="info-icon" src="assets/icon-clock.png" alt="">
+            <div>
+              <div class="info-big" id="timeText">--:--</div>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <img class="info-icon" src="assets/icon-temp.png" alt="">
+            <div>
+              <div class="info-big"><span id="tempText">--</span>°C</div>
+              <div class="info-small" id="weatherText">—</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- MITTLERER BEREICH -->
+      <div class="top-middle">
+        <section class="tile tile-aktuell">
+          <div class="tile-icon-header">
+            <div class="icon-badge icon-badge-aktuell">
+              <img src="assets/icon-aktuell.png" alt="Aktuelles">
+            </div>
+          </div>
+
+          <!-- NUR GEÄNDERT: Container + Bildbereich rechts ergänzt -->
+          <div class="aktuell-content">
+            <div class="news-cards" id="newsCards">
+              <!-- wird durch script.js gefüllt -->
+            </div>
+
+            <div class="aktuell-images" id="newsImages">
+              <!-- Bilder kommen später hier rein -->
+            </div>
+          </div>
+          <!-- ENDE NUR GEÄNDERT -->
+
+        </section>
+      </div>
+
+      <!-- RECHTER BEREICH -->
+      <div class="top-right">
+        <section class="tile tile-mensa">
+          <div class="tile-icon-header">
+            <div class="icon-badge icon-badge-mensa">
+              <img src="assets/icon-mensa.png" alt="Mensa">
+            </div>
+          </div>
+
+          <div class="mensa-box">
+            <div class="mensa-line"><span class="mensa-day">Mo</span><span>—</span></div>
+            <div class="mensa-line"><span class="mensa-day">Di</span><span>—</span></div>
+            <div class="mensa-line"><span class="mensa-day">Mi</span><span>—</span></div>
+            <div class="mensa-line"><span class="mensa-day">Do</span><span>—</span></div>
+            <div class="mensa-line"><span class="mensa-day">Fr</span><span>—</span></div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+    <!-- =========================
+         UNTERER BEREICH (60 %)
+         ========================= -->
+    <div class="bottom">
+      <section class="tile tile-plan">
+        <iframe
+          src="https://gym-neufreimann.webuntis.com/WebUntis/monitor?school=gym-neufreimann&monitorType=subst&format=Sch%C3%BCler%201"
+          title="Vertretungsplan">
+        </iframe>
+      </section>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
