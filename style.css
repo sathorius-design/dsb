@@ -306,6 +306,14 @@ body{
   white-space: nowrap;
   border: 0;
 }
+#newsImages img{
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+#newsImages img.is-fading{
+  opacity: 0;
+}
 
 
 
