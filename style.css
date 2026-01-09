@@ -10,7 +10,7 @@
   /* PPT-Farben für Icon-Badges */
   --badge-aktuell: #B7C8B6; /* aus PPT */
   --badge-mensa:   #D78771; /* aus PPT */
-  --badge-bilder: #8FA9D6;
+  --badge-bilder: #9EA3A7;
 
   --gap: 18px;
   --radius: 4px;           /* deutlich weniger Rundung */
@@ -308,6 +308,7 @@ body{
   white-space: nowrap;
   border: 0;
 }
+
 
 
 
