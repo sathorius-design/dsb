@@ -55,38 +55,49 @@ fetch("content.json")
       });
     }
 
-    // --- Bilder rechts neben Aktuelles: Platzhalter + Slideshow (NEU) ---
-    const imgWrap = document.getElementById("newsImages");
-    if (imgWrap) {
-      // alte Slideshow stoppen (falls vorhanden)
-      if (newsSlideTimer) {
-        clearInterval(newsSlideTimer);
-        newsSlideTimer = null;
-      }
+   // --- Bilder in der 3. Kachel: Slideshow aus assets/ (4 Bilder, Loop) ---
+const imgWrap = document.getElementById("newsImages");
+if (imgWrap) {
+  // alte Slideshow stoppen (falls vorhanden)
+  if (newsSlideTimer) {
+    clearInterval(newsSlideTimer);
+    newsSlideTimer = null;
+  }
 
-      const imgsRaw = data.newsImages;
-      const imgs = Array.isArray(imgsRaw) ? imgsRaw : (typeof imgsRaw === "string" ? [imgsRaw] : []);
-      const list = imgs.filter(Boolean);
+  // AUS content.json: entweder data.bilder (empfohlen) oder fallback data.newsImages
+  const imgsRaw =
+    data.bilder ?? data.newsImages;
 
-      if (list.length === 0) {
-        imgWrap.innerHTML = "";
-      } else {
-        // fester Platzhalter: genau 1 <img>, nur src wechselt
-        imgWrap.innerHTML = `<img id="newsImage" src="${list[0]}" alt="">`;
+  const imgs = Array.isArray(imgsRaw)
+    ? imgsRaw
+    : (typeof imgsRaw === "string" ? [imgsRaw] : []);
 
-        // mehrere Bilder nacheinander
-        if (list.length > 1) {
-          let idx = 0;
-          newsSlideTimer = setInterval(() => {
-            const imgEl = document.getElementById("newsImage");
-            if (!imgEl) return;
-            idx = (idx + 1) % list.length;
-            imgEl.src = list[idx];
-          }, 15000); // Wechselintervall
-        }
-      }
+  // nur gültige Einträge, auf max. 4 begrenzen
+  const list = imgs.filter(Boolean).slice(0, 4);
+
+  // helper: immer aus assets/ laden, außer es steht schon assets/ drin
+  const toAssetPath = (p) => (p.startsWith("assets/") ? p : `assets/${p}`);
+
+  if (list.length === 0) {
+    // Kachel bleibt sichtbar, nur Inhalt leer
+    imgWrap.innerHTML = "";
+  } else {
+    // genau 1 <img>, nur src wechselt
+    imgWrap.innerHTML = `<img id="newsImage" src="${toAssetPath(list[0])}" alt="">`;
+
+    // rotieren, wenn mehr als 1 Bild vorhanden
+    if (list.length > 1) {
+      let idx = 0;
+      newsSlideTimer = setInterval(() => {
+        const imgEl = document.getElementById("newsImage");
+        if (!imgEl) return;
+        idx = (idx + 1) % list.length;
+        imgEl.src = toAssetPath(list[idx]);
+      }, 15000); // 15s Wechselintervall (kannst du ändern)
     }
-  })
+  }
+}
+
   .catch(() => {
     const wrap = document.getElementById("newsCards");
     if (wrap) wrap.innerHTML = `<div class="news-card">Aktuelles konnte nicht geladen werden.</div>`;
@@ -143,3 +154,4 @@ function weatherCodeToText(code) {
 
 updateWeather();
 setInterval(updateWeather, 10 * 60 * 1000); // alle 10 Minuten
+
