@@ -278,12 +278,6 @@ body{
   overflow: hidden;
 }
 
-.aktuell-images:empty{
-  display: grid;          /* bleibt sichtbar */
-  background: var(--tile);/* gleiches Grau wie Tiles */
-  border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.06); /* optional, wirkt sauber */
-}
 
 .aktuell-images img{
   width: 100%;
@@ -304,4 +298,5 @@ body{
   white-space: nowrap;
   border: 0;
 }
+
 
