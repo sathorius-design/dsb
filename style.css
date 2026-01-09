@@ -178,8 +178,13 @@ body{
   object-fit: contain;
 }
 
+.icon-badge-bilder{
+  background: var(--badge-bilder);
+}
+
 .icon-badge-aktuell{ background: var(--badge-aktuell); }
 .icon-badge-mensa{ background: var(--badge-mensa); }
+.icon-badge-bilder{ background: var(--badge-bilder); }
 
 /* Aktuelles */
 .news-cards{
@@ -302,6 +307,7 @@ body{
   white-space: nowrap;
   border: 0;
 }
+
 
 
 
