@@ -4,10 +4,10 @@
     
   ],
   "mensa": {
-    "Mo": "Putenleberkäse mit Kartoffelsalat oder Kaiserschmarrn mit Apfelmus",
-    "Di": "Rinderfleischbällchen mit Reis oder Tortellini Aurora",
-    "Mi": "Backfisch mit Kartoffelpüree oder Kartoffelpuffer mit Apfelmus",
-    "Do": "Hähnchenschnitzel mit Pommes Frites oder Nudeln mit Tomatensoße",
+    "Mo": "Putenleberkäse mit Kartoffelsalat - Kaiserschmarrn mit Apfelmus",
+    "Di": "Rinderfleischbällchen mit Reis - Tortellini Aurora",
+    "Mi": "Backfisch mit Kartoffelpüree - Kartoffelpuffer mit Apfelmus",
+    "Do": "Hähnchenschnitzel mit Pommes Frites - Nudeln mit Tomatensoße",
     "Fr": "---"
   }
   ,
@@ -18,6 +18,7 @@
     "bild4.jpg"
   ]
 }
+
 
 
 
