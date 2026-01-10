@@ -221,7 +221,11 @@ body{
 
   font-size: 1.2rem;
 }
-
+.mensa-line span:last-child{
+  font-size: clamp(0.9rem, 1.05vw, 1.15rem);
+  line-height: 1.2;
+  word-break: break-word;
+}
 .mensa-day{
   font-weight: 400;
 }
@@ -314,6 +318,7 @@ body{
 #newsImages img.is-fading{
   opacity: 0;
 }
+
 
 
 
