@@ -228,14 +228,9 @@ body{
 }
 
 .mensa-line span:last-child{
-  font-size: clamp(0.85rem, 1.05vw, 1.10rem); /* CHANGED: etwas kleinerer Rahmen */
-  line-height: 1.15;                           /* CHANGED */
-  overflow: hidden;                            /* CHANGED */
-
-  display: -webkit-box;                        /* CHANGED: max 2 Zeilen ohne Zeilenhöhe zu sprengen */
-  -webkit-line-clamp: 2;                       /* CHANGED */
-  -webkit-box-orient: vertical;                /* CHANGED */
-
+  font-size: clamp(0.75rem, 0.9vw, 1.1rem);
+  line-height: 1.15;
+  white-space: normal;
   word-break: break-word;
 }
 
@@ -344,3 +339,4 @@ body{
 #newsImages img.is-fading{
   opacity: 0;
 }
+
