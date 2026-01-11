@@ -177,3 +177,13 @@ function weatherCodeToText(code) {
 updateWeather();
 setInterval(updateWeather, 10 * 60 * 1000); // alle 10 Minuten
 
+document.getElementById('updateForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = {
+    aktuelles: this.aktuelles.value,
+    bilder: this.bilder.value,
+    mensa: this.mensa.value
+  };
+  // Hier kommt der Dateizugriff, je nach Setup
+  console.log('Daten zum Speichern:', formData);
+});
