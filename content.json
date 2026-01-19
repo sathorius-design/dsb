@@ -1,16 +1,15 @@
 {
   "news": [
-    "Fr, 16.01.:",
-    " - Wahlkurs Fussball bei RUD findet heute mit FCB-Betreuer statt!",
-    " - Wahlkurs Band bei FIL fällt heute aus!"
+    "Di, 20.01.:",
+    " - Wahlkurs Sanitätsdienst bei KFM fällt aus!"
     
     
   ],
   "mensa": {
-    "Mo": "Putenleberkäse mit Kartoffelsalat - Kaiserschmarrn mit Apfelmus",
-    "Di": "Rinderfleischbällchen mit Reis - Tortellini Aurora",
-    "Mi": "Backfisch mit Kartoffelpüree - Kartoffelpuffer mit Apfelmus",
-    "Do": "Hähnchenschnitzel mit Pommes - Nudeln mit Tomatensoße",
+    "Mo": "Calamari Fritti mit Kartoffelsalat - Gnocchi al pomodoro",
+    "Di": "Pute mit Pilzrahmsoße, Reis - Tortellini alla panna",
+    "Mi": "Pasta mit Rindfleischbällchen, Erbsen - Gefüllte rote Paprika, Reis",
+    "Do": "Cuyrrwurst, Pommes Frittes - Pasta al pomodoro",
     "Fr": "---"
   }
   ,
@@ -21,6 +20,7 @@
     "bild4.jpg"
   ]
 }
+
 
 
 
