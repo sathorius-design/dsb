@@ -1,14 +1,14 @@
 {
   "news": [
   
-    "Heute nix Neues, genießt euren Tag!"
+    "Mo. 09.02.: Wahlunterricht Tanz bei HAU entfällt!"
     
   ],
   "mensa": {
-    "Mo": "Lasagne vom Rind - Gnocchi Aurora",
-    "Di": "Camembert Preiselbeeren - Pizza",
-    "Mi": "Rindfleischbällchen, Reis - Gemüse, Reis",
-    "Do": "Chicken Nuggets, Pommes - Pasta pomodoro",
+    "Mo": "Überraschungsgerichte",
+    "Di": "Überraschungsgerichte",
+    "Mi": "Überraschungsgerichte",
+    "Do": "Überraschungsgerichte",
     "Fr": "---"
   }
   ,
@@ -19,6 +19,7 @@
     "bild4.jpg"
   ]
 }
+
 
 
 
