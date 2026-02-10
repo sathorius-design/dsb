@@ -193,7 +193,7 @@ document.getElementById('updateForm').addEventListener('submit', function(event)
   const img = document.getElementById("globalOverlayImg");
 
   // DEIN BILD (wie gewünscht)
-  const IMAGE_SRC = "./images/bild2.jpg";
+  const IMAGE_SRC = "./assets/bild2.jpg";
 
   const SHOW_MS = 5000;    // 5 Sekunden anzeigen
   const PERIOD_MS = 60000; // jede Minute
@@ -215,3 +215,4 @@ document.getElementById('updateForm').addEventListener('submit', function(event)
   showOverlay();
   setInterval(showOverlay, PERIOD_MS);
 })();
+
