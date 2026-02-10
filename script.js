@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const dbg = document.getElementById("jsDebug");
+  if (dbg) dbg.textContent = "JS: läuft ✓";
+});
+
 // ===== 1) Datum & Uhr (lokal, sekundengenau brauchst du nicht für Beamer) =====
 function updateDateTime() {
   const now = new Date();
@@ -221,6 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scheduleNextFullMinute();
 });
+
 
 
 
