@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const dbg = document.getElementById("jsDebug");
-  if (dbg) dbg.textContent = "JS: läuft ✓";
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("globalOverlay");
@@ -256,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scheduleNextFullMinute();
 });
+
 
 
 
