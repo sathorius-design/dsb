@@ -6,25 +6,31 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("globalOverlay");
   const img = document.getElementById("globalOverlayImg");
-  const dbg = document.getElementById("jsDebug");
 
-  if (!overlay || !img) {
-    if (dbg) dbg.textContent = "Fehler: Overlay-HTML fehlt";
-    return;
+  if (!overlay || !img) return;
+
+  const IMAGE_SRC = "/assets/bild2.jpg";
+  const SHOW_MS = 5000; // 5 Sekunden
+
+  // Bild vorladen (verhindert Ruckeln)
+  const preload = new Image();
+  preload.src = IMAGE_SRC;
+
+  function showOverlay() {
+    img.src = IMAGE_SRC;
+    overlay.classList.add("show");
+    setTimeout(() => overlay.classList.remove("show"), SHOW_MS);
   }
 
-  img.src = "/assets/bild2.jpg";
+  // Auf die nächste volle Minute synchronisieren
+  const now = new Date();
+  const msToNextMinute =
+    (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
 
   setTimeout(() => {
-    overlay.classList.add("show");
-    if (dbg) dbg.textContent = "Overlay: SHOW ✓";
-
-    setTimeout(() => {
-      overlay.classList.remove("show");
-      if (dbg) dbg.textContent = "Overlay: HIDE ✓";
-    }, 5000);
-
-  }, 2000);
+    showOverlay();               // einmal bei :00
+    setInterval(showOverlay, 60_000); // dann jede Minute wieder
+  }, msToNextMinute);
 });
 
 // ===== 1) Datum & Uhr (lokal, sekundengenau brauchst du nicht für Beamer) =====
@@ -250,6 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scheduleNextFullMinute();
 });
+
 
 
 
