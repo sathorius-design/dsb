@@ -3,6 +3,29 @@ document.addEventListener("DOMContentLoaded", () => {
   if (dbg) dbg.textContent = "JS: läuft ✓";
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("globalOverlay");
+  const img = document.getElementById("globalOverlayImg");
+  const dbg = document.getElementById("jsDebug");
+
+  if (!overlay || !img) {
+    if (dbg) dbg.textContent = "Fehler: Overlay-HTML fehlt";
+    return;
+  }
+
+  img.src = "/assets/bild2.jpg";
+
+  setTimeout(() => {
+    overlay.classList.add("show");
+    if (dbg) dbg.textContent = "Overlay: SHOW ✓";
+
+    setTimeout(() => {
+      overlay.classList.remove("show");
+      if (dbg) dbg.textContent = "Overlay: HIDE ✓";
+    }, 5000);
+
+  }, 2000);
+});
 
 // ===== 1) Datum & Uhr (lokal, sekundengenau brauchst du nicht für Beamer) =====
 function updateDateTime() {
@@ -227,6 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scheduleNextFullMinute();
 });
+
 
 
 
