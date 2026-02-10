@@ -187,3 +187,31 @@ document.getElementById('updateForm').addEventListener('submit', function(event)
   // Hier kommt der Dateizugriff, je nach Setup
   console.log('Daten zum Speichern:', formData);
 });
+
+(function setupGlobalOverlay() {
+  const overlay = document.getElementById("globalOverlay");
+  const img = document.getElementById("globalOverlayImg");
+
+  // DEIN BILD (wie gewünscht)
+  const IMAGE_SRC = "./images/bild2.jpg";
+
+  const SHOW_MS = 5000;    // 5 Sekunden anzeigen
+  const PERIOD_MS = 60000; // jede Minute
+
+  // Bild vorladen (verhindert Ruckeln)
+  const preload = new Image();
+  preload.src = IMAGE_SRC;
+
+  function showOverlay() {
+    img.src = IMAGE_SRC;
+    overlay.classList.add("show");
+
+    setTimeout(() => {
+      overlay.classList.remove("show");
+    }, SHOW_MS);
+  }
+
+  // Sofort einmal zeigen + dann jede Minute wiederholen
+  showOverlay();
+  setInterval(showOverlay, PERIOD_MS);
+})();
