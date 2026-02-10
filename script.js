@@ -188,32 +188,40 @@ document.getElementById('updateForm').addEventListener('submit', function(event)
   console.log('Daten zum Speichern:', formData);
 });
 
-(function setupGlobalOverlay() {
+document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("globalOverlay");
   const img = document.getElementById("globalOverlayImg");
 
-  // DEIN BILD (wie gewünscht)
-  const IMAGE_SRC = "/assets/bild2.jpg";
+  if (!overlay || !img) return;
 
-  const SHOW_MS = 5000;    // 5 Sekunden anzeigen
-  const PERIOD_MS = 60000; // jede Minute
+  const IMAGE_SRC = "/assets/bild2.jpg"; // Netlify-sicher
+  const SHOW_MS = 5000;
 
-  // Bild vorladen (verhindert Ruckeln)
+  // Bild vorladen
   const preload = new Image();
   preload.src = IMAGE_SRC;
 
   function showOverlay() {
     img.src = IMAGE_SRC;
     overlay.classList.add("show");
-
-    setTimeout(() => {
-      overlay.classList.remove("show");
-    }, SHOW_MS);
+    setTimeout(() => overlay.classList.remove("show"), SHOW_MS);
   }
 
-  // Sofort einmal zeigen + dann jede Minute wiederholen
-  showOverlay();
-  setInterval(showOverlay, PERIOD_MS);
-})();
+  // Auf die nächste volle Minute synchronisieren
+  function scheduleNextFullMinute() {
+    const now = new Date();
+    const msToNextMinute =
+      (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+
+    setTimeout(() => {
+      showOverlay();              // einmal zur :00
+      setInterval(showOverlay, 60_000); // dann jede Minute wieder
+    }, msToNextMinute);
+  }
+
+  scheduleNextFullMinute();
+});
+setTimeout(showOverlay, 2000);
+
 
 
