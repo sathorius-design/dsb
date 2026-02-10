@@ -221,7 +221,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scheduleNextFullMinute();
 });
-setTimeout(showOverlay, 2000);
+
+
 
 
 
