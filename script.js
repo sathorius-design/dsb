@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!overlay || !img) return;
 
   const IMAGE_SRC = "/assets/bild2.jpg";
-  const SHOW_MS = 5000; // 5 Sekunden
+  const SHOW_MS = 10000; // 5 Sekunden
 
   // Bild vorladen (verhindert Ruckeln)
   const preload = new Image();
@@ -256,6 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scheduleNextFullMinute();
 });
+
 
 
 
