@@ -1,5 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
+  const OVERLAY_ENABLED = false;   // <- jetzt AUS, später wieder true
   const overlay = document.getElementById("globalOverlay");
   const img = document.getElementById("globalOverlayImg");
 
@@ -252,6 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scheduleNextFullMinute();
 });
+
 
 
 
