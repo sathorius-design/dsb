@@ -1,14 +1,15 @@
 {
   "news": [
   
-    "Do. 12.03.: Wahlkurs Schach entfällt!"
+    "Mo. 16.03.: Wahlkurs Tanz entfällt!",
+    "Klassen 7ab diese Woche im Schullandheim mit BRI, HAU, STÖ, IRM"
     
   ],
   "mensa": {
-    "Mo": "Putencurrywurst, Pommes - Nudeln, Tomatensoße",
-    "Di": "Putenfrikadelle, Kartoffelpüree - Käsespätzle, Röstzwiebeln",
-    "Mi": "Bucatini, Thunfischsoße - Tortellini Emilina, Erbsen, Pilzen",
-    "Do": "Fischstäbchen, Kartoffelpüree - Rigatoni al Pesto",
+    "Mo": "Hähnchenschnitzel, Pommes - Nudeln, Tomatensoße",
+    "Di": "Geflügelcevapcici, Reis - Gemüsefrikadellen, Reis",
+    "Mi": "Linseneintopf, Wiener, Semmel - Reiberdatschi, Apfelmus",
+    "Do": "Ofenkartoffel, Hähnchenstreifen - Ofenkartoffel, Vegi Nuggets",
     "Fr": "---"
   }
   ,
