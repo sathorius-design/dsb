@@ -1,9 +1,7 @@
 {
   "news": [
-    
-    "Do 07.05.: Alle Klassen, SCHACH bei BRO entfällt!",
-    "Do 07.05.: 5b, 1.-4. Stadtbücherei Milbertshofen mit MÜL, ROT"
-    
+    { "text": "Do 07.05.: Alle Klassen, SCHACH bei BRO entfällt!", "type": "cancel" },
+    { "text": "Do 07.05.: 5b, 1.-4. Stadtbücherei Milbertshofen mit MÜL, ROT" }
   ],
   "mensa": {
     "Mo": "Dampfnudeln, Vanillesoße - Kartoffelsuppe, Putenwiener",
