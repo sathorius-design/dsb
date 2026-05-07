@@ -205,7 +205,16 @@ document.getElementById("updateForm").addEventListener("submit", function (event
 });
 
 
+data.news.forEach(item => {
+  const text = typeof item === "string" ? item : item.text;
+  const type = typeof item === "object" ? item.type : null;
 
+  const li = document.createElement("li");
+  li.textContent = text;
+  if (type) li.classList.add(`news-${type}`);
+
+  document.querySelector("#news").appendChild(li);
+});
 
 
 
