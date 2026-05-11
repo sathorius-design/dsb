@@ -194,15 +194,18 @@ updateWeather();
 setInterval(updateWeather, 10 * 60 * 1000);
 
 // ===== 4) Update-Formular =====
-document.getElementById("updateForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-  const formData = {
-    aktuelles: this.aktuelles.value,
-    bilder: this.bilder.value,
-    mensa: this.mensa.value,
-  };
-  console.log("Daten zum Speichern:", formData);
-});
+const form = document.getElementById("updateForm");
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = {
+      aktuelles: this.aktuelles.value,
+      bilder: this.bilder.value,
+      mensa: this.mensa.value,
+    };
+    console.log("Daten zum Speichern:", formData);
+  });
+}
 
 
 
